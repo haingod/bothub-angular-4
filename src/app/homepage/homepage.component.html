@@ -1,0 +1,71 @@
+<body class="hold-transition skin-blue sidebar-mini">
+
+  <div class="wrapper">
+    <!--navbar-->
+    <app-navbar></app-navbar>
+    <!--sidebar-->
+    <app-sidebar></app-sidebar>
+    <!-- Content Wrapper. Contains page content -->
+    <div class="content-wrapper">
+      <!-- Content Header (Page header) -->
+      <app-pagetitle title="ダッシュボード"></app-pagetitle>
+      <!-- Main content -->
+      <section class="content">
+        <!-- Top info -->
+        <div class="row">
+          <div class="col-md-4 col-sm-6 col-xs-12">
+            <app-infobox background="bg-aqua" number="9999" icon="fa-user" text="オーナー数"></app-infobox>
+          </div>
+          <!-- /.col -->
+          <div class="col-md-4 col-sm-6 col-xs-12">
+            <app-infobox background="bg-red" number="9999" icon="fa-globe" text="コミュニティー数"></app-infobox>
+          </div>
+          <!-- /.col -->
+          <!-- fix for small devices only -->
+          <div class="clearfix visible-sm-block"></div>
+
+          <div class="col-md-4 col-sm-6 col-xs-12">
+            <app-infobox background="bg-green" number="9999" icon="ion ion-speedometer" text="アクティブ率(前月)"></app-infobox>
+            <!-- /.info-box -->
+          </div>
+        </div>
+        <div class="row">
+          <div class="col-md-4 col-sm-6 col-xs-12">
+            <app-infobox background="bg-yellow" number="9999" icon="fa-users" text="ユーザー数"></app-infobox>
+            <!-- /.info-box -->
+          </div>
+          <!-- /.col -->
+          <div class="col-md-8 col-sm-6 col-xs-12">
+            <app-infobox background="bg-purple" number="9999" icon="fa-comments-o" text="チャットbotメッセージ総数"></app-infobox>
+            <!-- /.info-box -->
+          </div>
+          <!-- /.col -->
+        </div>
+        <!-- /.Top info -->
+        <app-datatable title="管理者へのお知らせ" [rows]="rows"></app-datatable>
+      </section>
+      <!-- /.content -->
+    </div>
+    <!-- /.content-wrapper -->
+    <app-footer></app-footer>
+  </div>
+  <!-- ./wrapper -->
+  <script>
+    $(function () {
+      $('input').iCheck({
+        checkboxClass: 'icheckbox_square-blue',
+        radioClass: 'iradio_square-blue',
+        increaseArea: '20%' // optional
+      });
+
+      $('#example1').DataTable({
+        'paging'      : true,
+        'lengthChange': false,
+        'searching'   : false,
+        'ordering'    : true,
+        'info'        : true,
+        'autoWidth'   : false
+      })
+    });
+  </script>
+</body>

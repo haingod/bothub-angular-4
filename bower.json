@@ -1,0 +1,26 @@
+{
+  "name": "bothub-ang4",
+  "description": "",
+  "main": "",
+  "authors": [
+    "Nguyen Ngoc Hai <haingod@gmail.com>"
+  ],
+  "license": "MIT",
+  "homepage": "",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "src/bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "jquery": "^3.2.1",
+    "bootstrap": "^3.3.7",
+    "font-awesome": "^4.7.0",
+    "Ionicons": "ionicons#^2.0.1",
+    "AdminLTE": "admin-lte#^2.3.11",
+    "datatables.net-bs": "^2.1.1"
+  }
+}

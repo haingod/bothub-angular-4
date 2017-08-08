@@ -1,0 +1,64 @@
+<body class="hold-transition skin-blue sidebar-mini">
+  <div class="wrapper ad2000">
+    <!--navbar-->
+    <app-navbar></app-navbar>
+    <!--sidebar-->
+    <app-sidebar></app-sidebar>
+    <!-- Content Wrapper. Contains page content -->
+    <div class="content-wrapper">
+      <!-- Content Header (Page header) -->
+      <app-pagetitle title="コミュニティーオーナー一覧"></app-pagetitle>
+
+      <!-- Main content -->
+      <section class="content">
+        <div class="row">
+          <div class="col-sm-12">
+            <a href="AD2010.html" class="btn btn-primary btn-flat pull-right">新規登録</a>
+          </div>
+        </div>
+        <div class="box">
+          <div class="box-body">
+            <div id="ad2000-table-wrapper" class="dataTables_wrapper form-inline dt-bootstrap">
+              <div class="row">
+                <div class="col-sm-12">
+                  <table id="ad2000-table" class="table table-bordered  dataTable" role="grid" aria-describedby="ad2000-table_info">
+                    <thead>
+                    <tr role="row">
+                      <th rowspan="2">会社名</th>
+                      <th rowspan="2">契約部門</th>
+                      <th>担当者(主)</th>
+                      <th>所在地</th>
+                    </tr>
+                    <tr role="row">
+                      <th>担当者(副)</th>
+                      <th>担当者連絡先</th>
+                    </tr>
+                    </thead>
+                    <tbody *ngFor="let row of rows">
+                      <tr role="row" class="odd">
+                        <td class="sorting_1" rowspan="2"><a href="#">{{row.data1}}</a></td>
+                        <td rowspan="2">{{row.data2}}</td>
+                        <td>{{row.data3}}</td>
+                        <td>{{row.data4}}</td>
+                      </tr>
+                      <tr role="row" class="odd">
+                        <td>{{row.data5}}</td>
+                        <td>{{row.data6}}</td>
+                      </tr>
+                    </tbody>
+                  </table>
+                </div>
+              </div>
+
+            </div>
+          </div>
+          <!-- /.box-body -->
+        </div>
+
+      </section>
+      <!-- /.content -->
+    </div>
+    <!-- /.content-wrapper -->
+    <app-footer></app-footer>
+  </div>
+</body>
